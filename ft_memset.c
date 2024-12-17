@@ -21,7 +21,7 @@ void	*ft_memset(void *str, int val, size_t size)
 	buffer = (char *)malloc(sizeof(char));
 	if (buffer == NULL)
 	{
-		return(0);
+		return(NULL);
 	}
 	str = (char*) str + 1;
 	while ( str != size)

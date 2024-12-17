@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dest, void* src, size_t lun)
 	dest = (char *)malloc(sizeof(char));
 	if (dest == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 	while (src[i] != '\0')
 	{
