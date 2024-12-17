@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 10:46:59 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:00:20 by eenei            ###   ########.fr       */
+/*   Created: 2024/12/17 14:44:03 by eenei             #+#    #+#             */
+/*   Updated: 2024/12/17 15:03:06 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char*	ft_strtrim(char const *s1, char const *set)
+char	*ft_strmapi(char const  *s, char (*f)(unsigned int, char))
 {
-	char *fine;
-	char *	buffer;
+	char	*buffer;
+	size_t	len;
+	unsigned int	i;
 
-	fine = s1;
-	while (s1 == ' ' || s1 >= 9 && s1 <= 13)
+	if(!s || !f)
+		return (NULL);
+	while (s[len] != '\0')
+		len++;
+	buffer = (char *)malloc(sizeof(char) * (len + 1));
+	if(!buffer)
+		return (NULL);
+	while (i < len)
 	{
-		*s1++;
+		buffer[i] = f(i, s[i]);
 	}
-	if (*s1 == '\0')
-		return;
-	while (*fine != '\0')
-	{
-		fine--;
-	}
-	while (fine < s1 && *fine == ' ' || *fine >= 9 && *fine <= 13)
-	{
-		fine--;
-	}
-	fine == '\0';
+	buffer[len] = '\0';
+	return (buffer);
 }

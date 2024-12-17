@@ -6,11 +6,11 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:01:31 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 10:07:45 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/17 13:02:27 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t num, size_t val)
 {

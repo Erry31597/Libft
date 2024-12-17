@@ -6,9 +6,11 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 14:29:16 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/11 15:00:58 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/17 13:01:41 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strnstr(const char *src, const char *to_find, size_t leng)
 {

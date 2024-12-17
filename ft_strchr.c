@@ -6,9 +6,11 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:49:04 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/11 12:49:05 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/17 13:03:38 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {

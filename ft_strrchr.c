@@ -6,11 +6,11 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:49:11 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/11 12:57:25 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/17 16:06:38 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, char c)
 {
@@ -31,6 +31,3 @@ char	*ft_strrchr(const char *str, char c)
 	}
 	return (NULL);
 }
-#include <string.h>
-
-strcmp()

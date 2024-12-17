@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 10:46:59 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:00:20 by eenei            ###   ########.fr       */
+/*   Created: 2024/12/17 16:27:44 by eenei             #+#    #+#             */
+/*   Updated: 2024/12/17 16:43:13 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char*	ft_strtrim(char const *s1, char const *set)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	char *fine;
-	char *	buffer;
-
-	fine = s1;
-	while (s1 == ' ' || s1 >= 9 && s1 <= 13)
+	int	i;
+	int	j;
+	char	*s1;
+	char	*s2;
+	
+	s1 = (char*) str1;
+	s2 = (char*) str2;
+	i = 0;
+	while (i < n)
 	{
-		*s1++;
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+		i++;
 	}
-	if (*s1 == '\0')
-		return;
-	while (*fine != '\0')
-	{
-		fine--;
-	}
-	while (fine < s1 && *fine == ' ' || *fine >= 9 && *fine <= 13)
-	{
-		fine--;
-	}
-	fine == '\0';
+	return (0);
 }

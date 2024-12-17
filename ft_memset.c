@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 //#include <>
 
 void	*ft_memset(void *str, int val, size_t size)

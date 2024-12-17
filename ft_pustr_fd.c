@@ -6,9 +6,11 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 14:13:35 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/11 14:13:57 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/17 13:03:27 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

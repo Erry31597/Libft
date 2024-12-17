@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 10:46:59 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:00:20 by eenei            ###   ########.fr       */
+/*   Created: 2024/12/17 16:49:56 by eenei             #+#    #+#             */
+/*   Updated: 2024/12/17 16:55:23 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char*	ft_strtrim(char const *s1, char const *set)
+void	*memmove(void *dest, void *src, size_t n)
 {
-	char *fine;
-	char *	buffer;
+	int	*d;
+	int	*s;
+	int	i;
 
-	fine = s1;
-	while (s1 == ' ' || s1 >= 9 && s1 <= 13)
-	{
-		*s1++;
-	}
-	if (*s1 == '\0')
-		return;
-	while (*fine != '\0')
-	{
-		fine--;
-	}
-	while (fine < s1 && *fine == ' ' || *fine >= 9 && *fine <= 13)
-	{
-		fine--;
-	}
-	fine == '\0';
+	s = (unsigned char *) src;
+	d = (unsigned char *) dest; 
 }

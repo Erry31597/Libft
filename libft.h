@@ -6,12 +6,15 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:44:56 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/11 13:47:19 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/17 15:56:30 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef libft.h
-# define libft .h
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+# include <stdio.h>
+# include <unistd.h>
 
 // funzioni controllo caratteri
 int				ft_isalpha(char c);
@@ -24,7 +27,7 @@ char			ft_istolower(char c);
 // funzioni controllo stringhe
 int				ft_atoi(const char *str);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
-int				strlen(char *str);
+int				ft_strlen(char *str);
 char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, char c);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);

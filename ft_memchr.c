@@ -6,19 +6,19 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:47:50 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 09:55:57 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/17 14:32:17 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include	<>
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int val, size_t num)
 {
-	unisgned char	*i;
+	unsigned char	*i;
 	unsigned char	c;
 	
 	i = (unsigned char *)str;
-	c = unsigned char val;
+	c = (unsigned char) val;
 	if (i == 0)
 	{
 		return (NULL);

@@ -10,26 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<>
+#include "libft.h"
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest, void* src, size_t lun)
+void	*ft_memcpy(void *dest, void* src, size_t n)
 {
-	int	i;
-	int	j;
-	char *dest;
+	size_t	i;
+	unsigned char	*d;
+	unsigned char	*s;
 
 	i = 0;
-	j =0;
-	dest = (char *)malloc(sizeof(char));
-	if (dest == NULL)
-	{
+	if (src == NULL || dest == NULL)
 		return (NULL);
-	}
-	while (src[i] != '\0')
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (i < n)
 	{
-		dest[j] = src[i];
+		d[i] = s[i];
 		i++;
-		j++;
 	}
+	return (dest);
+}
 
+int	main()
+{
+	char *src = "hello, soreta";
+	char dest[] = "";
+	size_t n = 6;
+
+	printf("%s\n", (char *)ft_memcpy(dest, src, n));
 }

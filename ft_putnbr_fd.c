@@ -6,9 +6,11 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 14:18:51 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/11 14:28:06 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/17 13:03:34 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
