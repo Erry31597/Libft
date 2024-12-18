@@ -15,21 +15,15 @@
 
 void	*ft_memset(void *str, int val, size_t size)
 {
-	char	buffer;
-	int	 c;
+	unsigned char	*s;
 
-	buffer = (char *)malloc(sizeof(char));
-	if (buffer == NULL)
+	s = (unsigned char *)str;
+	while (size > 0)
 	{
-		return(NULL);
+		*s = (unsigned char *)val;
+		s++;
 	}
-	str = (char*) str + 1;
-	while ( str != size)
-	{
-		str = (unsigned char) val;
-		str++;
-	}
-	free(buffer);
+	return (s);
 }
 
 /*intmain(void)

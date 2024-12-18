@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:46:59 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:00:20 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/18 11:25:21 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ char*	ft_strtrim(char const *s1, char const *set)
 		fine--;
 	}
 	fine == '\0';
+	return (s1);
 }

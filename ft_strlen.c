@@ -6,22 +6,22 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:24:40 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:04:07 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/18 11:22:54 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(char const *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while(*str != '\0')
 	{
-		i++;
+		*str++;
 	}
-	return(i);
+	return(str);
 }
 
 /*int	main()

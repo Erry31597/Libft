@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:24:06 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:02:33 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/18 10:53:42 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	int	a;
-
-	a = 0;
-	if(a >= 'a' && a <= 'z' || a >= 'A' && a <= 'Z')
-	{
-		return(1);
-	}
-	if(a >= '0' && a <= '9')
-	{
-		return (1);
-	}
-	return(0);
+	return (ft_isalpha(c) && ft_isdigit(c));
 }

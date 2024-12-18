@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:09:11 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 16:05:50 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/18 09:21:53 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char 	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	size_t	i;
 	char	*buffer;
 
 	i = 0;

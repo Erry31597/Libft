@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 10:01:31 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/18 10:41:50 by eenei            ###   ########.fr       */
+/*   Created: 2024/12/18 13:53:37 by eenei             #+#    #+#             */
+/*   Updated: 2024/12/18 15:20:00 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t num, size_t val)
+char	*count_word(const char *str, char c)
 {
-	void	*buffer;
-	size_t	i;
-	size_t	totleng;
-	unsigned char	*byte;
-	
+	int	i;
+	int	count;
+	char	*buffer;
 	
 	i = 0;
-	buffer = malloc(num * val);
-	if (!buffer)
-		return (NULL);
-	byte = buffer;
-	totleng = num * val;
-	while (i < totleng)
+	count = 0;
+	while (str[i] != '\0')
 	{
-		byte = 0;
-		i++;
+		if (str[i + 1] != c && str[i - 1] == c)
+		count++;
 	}
-	return (buffer);
+	i++;
+	buffer = (char *)malloc((count + 1) * sizeof(char *));
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	*buffer;
 }

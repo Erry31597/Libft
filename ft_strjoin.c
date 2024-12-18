@@ -1,35 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 10:01:31 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/18 10:41:50 by eenei            ###   ########.fr       */
+/*   Created: 2024/12/18 09:23:11 by eenei             #+#    #+#             */
+/*   Updated: 2024/12/18 10:34:58 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t num, size_t val)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void	*buffer;
+	size_t	len1;
+	size_t	len2;
 	size_t	i;
-	size_t	totleng;
-	unsigned char	*byte;
-	
-	
+	size_t	j;
+	char	*buffer;
+
 	i = 0;
-	buffer = malloc(num * val);
+	j = 0;
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	if (!s1 || !s2)
+		return (NULL);
+	buffer = (char *)malloc(len1 + len2 + 1);
 	if (!buffer)
 		return (NULL);
-	byte = buffer;
-	totleng = num * val;
-	while (i < totleng)
+	while  (i < len1)
 	{
-		byte = 0;
-		i++;
+		buffer[i] = s1[i];
+		i++;	
 	}
+	while (j < len2)
+	{
+		buffer[i + j] = s2[j];
+		j++;
+	}
+	buffer[i + j] = '\0';
 	return (buffer);
 }
+
+int	main()
+{
+	const char	*s1 = "ciao";
+	const char	*s2 = "bello";
+	char	*buffer = ft_strjoin(s1, s2);
+	
+	printf("%s\n", buffer);
+}
+

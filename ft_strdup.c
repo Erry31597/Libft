@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:28:45 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 09:38:49 by eenei            ###   ########.fr       */
+/*   Updated: 2024/12/18 11:38:47 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ char	*ft_strdup(char *str)
 	{
 		j++;
 	}
-	buffer = (char *)malloc((j + 1) * sizeof(char));
+	buffer = (char *)malloc((j + 1));
 	{
 		if (buffer == NULL)
 		{
 			return (NULL);
 		}
 		i = 0;
-		while (i <= j)
+		while (i < j)
 		{
 			buffer[i] = str[i];
 			i++;
