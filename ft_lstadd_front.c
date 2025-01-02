@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 13:24:40 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 15:35:59 by eenei            ###   ########.fr       */
+/*   Created: 2025/01/02 10:35:19 by eenei             #+#    #+#             */
+/*   Updated: 2025/01/02 10:45:30 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char const *str)
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-
-	i = 0;
-	while(*str != '\0')
+	if(lst && new)
 	{
-		*str++;
+		new -> next = *lst;
+		*lst = new;
 	}
-	return(str);
 }
-
-/*int	main()
-{
-	ft_strlen("ciao");
-	return(0);
-}*/

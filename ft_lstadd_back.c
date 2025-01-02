@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 13:24:40 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 15:35:59 by eenei            ###   ########.fr       */
+/*   Created: 2025/01/02 10:58:26 by eenei             #+#    #+#             */
+/*   Updated: 2025/01/02 11:03:44 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char const *str)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	i;
-
-	i = 0;
-	while(*str != '\0')
+	if (*lst == NULL)
 	{
-		*str++;
+		*lst = new;	
 	}
-	return(str);
+	else
+	{
+		t_list *last = ft_lstlast(*lst);
+		last -> next = new;
+	}
 }
-
-/*int	main()
-{
-	ft_strlen("ciao");
-	return(0);
-}*/

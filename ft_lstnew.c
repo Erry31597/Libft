@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 13:24:40 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 15:35:59 by eenei            ###   ########.fr       */
+/*   Created: 2025/01/02 10:23:59 by eenei             #+#    #+#             */
+/*   Updated: 2025/01/02 10:33:51 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char const *str)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
-
-	i = 0;
-	while(*str != '\0')
+	t_list	*new_node;
+	
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (new_node == NULL)
 	{
-		*str++;
+		return (NULL);
 	}
-	return(str);
+	new_node -> content = content;
+	new_node -> next = NULL;
+	return (new_node);
 }
-
-/*int	main()
-{
-	ft_strlen("ciao");
-	return(0);
-}*/

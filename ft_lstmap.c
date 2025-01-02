@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 13:24:40 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 15:35:59 by eenei            ###   ########.fr       */
+/*   Created: 2025/01/02 11:42:46 by eenei             #+#    #+#             */
+/*   Updated: 2025/01/02 11:51:26 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char const *str)
+t_list *ft_lstmap(t_list *lst, void (*)(void *), void(*del)(void *))
 {
-	size_t	i;
+	t_list	*nlst;
+	t_list	*nnode;
+	t_list	*lista;
 
-	i = 0;
-	while(*str != '\0')
+	nlst = NULL;
+	lista = lst;
+	while (lista)
 	{
-		*str++;
+		nnode = ft_lstnew (f(lista -> content));
+		if (!nnode)
+		{
+			ft_lstclear(&nlst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&nlst, nnode);
+		lista = lista -> next;
 	}
-	return(str);
+	return (nlst);
 }
-
-/*int	main()
-{
-	ft_strlen("ciao");
-	return(0);
-}*/

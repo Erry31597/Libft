@@ -1,56 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_split2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/17 11:08:50 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 14:00:39 by eenei            ###   ########.fr       */
+/*   Created: 2025/01/02 14:00:57 by eenei             #+#    #+#             */
+/*   Updated: 2025/01/02 15:42:24 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	lenght(int n)
+static size_t	word_count(const char *str, char c)
 {
-	int	len;
+	size_t	count;
+	size_t	word;
 
-	len = 0;
-	if (n < 0)
+	count = 0;
+	word = 0;
+	while (*str)
 	{
-		n = -n;
-		len++;
+		if (*str == c)
+		{
+			word = 0;
+		}
+		else if (word == 0)
+		{
+			word = 1;
+			count++;
+		}
+		str++;
 	}
-	while (n > 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return len;
+	return (count);
 }
+	
 
-char	*ft_itoa(int n)
+
+char	**ft_split
 {
-	char *buffer;
-	int len;
-
-	len = lenght(n);
-	if (n == -2147483648)
-		return ("-2147483648");
-	if (n < 0)
-	{
-		n = -n;
-		len++;
-	}
-	buffer = (char *)malloc(sizeof(char) * len + 1);
+	char	*buffer;
+	size_t	i;
+	size_t	len;
+	
+	i = 0;
+	len = 0;
+	buffer = (char *)malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (buffer == NULL)
 		return (NULL);
-	buffer[len] = '\0';
-	while (n > 0)
-	{
-		buffer[--len] = (n % 10) + '0';
-		n /= 10;
-	}
-	return (buffer);
+		
 }
