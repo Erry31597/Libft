@@ -6,32 +6,34 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:46:59 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/18 11:25:21 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 16:16:09 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char*	ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *fine;
-	char *	buffer;
+	char	*end;
+	char	*buffer;
+	int	i;
 
-	fine = s1;
-	while (s1 == ' ' || s1 >= 9 && s1 <= 13)
+	i = 0;
+	end = s1;
+	while (s1[i] == ' ' || (s1[i] >= 9 && s1[i] <= 13))
 	{
-		*s1++;
+		i++;
 	}
 	if (*s1 == '\0')
-		return;
-	while (*fine != '\0')
+		return (NULL);
+	while (*end == '\0')
 	{
-		fine--;
+		end--;
 	}
-	while (fine < s1 && *fine == ' ' || *fine >= 9 && *fine <= 13)
+	while ((end < s1 && *end == ' ') || (*end >= 9 && *end <= 13))
 	{
-		fine--;
+		end--;
 	}
-	fine == '\0';
-	return (s1);
+	end == '\0';
+	return ((char *)s1);
 }

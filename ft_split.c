@@ -5,63 +5,103 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 13:53:37 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 13:57:29 by eenei            ###   ########.fr       */
+/*   Created: 2025/01/02 14:00:57 by eenei             #+#    #+#             */
+/*   Updated: 2025/01/03 15:51:34 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*count_word(const char *str, char c)
+static size_t	word_count(const char *str, char c)
 {
-	int	i;
-	int	count;
-	char	*buffer;
-	
-	i = 0;
+	size_t	count;
+	size_t	word;
+
 	count = 0;
-	while (str[i] != '\0')
+	word = 0;
+	while (*str)
 	{
-		if (str[i + 1] != c && str[i - 1] == c)
-		count++;
-	}
-	i++;
-	buffer = (char *)malloc((count + 1) * sizeof(char *));
-		if (buffer== NULL)
-	{
-		return (NULL);
+		if (*str == c)
+		{
+			word = 0;
+		}
+		else if (word == 0)
+		{
+			word = 1;
+			count++;
+		}
+		str++;
 	}
 	return (count);
 }
+	
+static int	word_len(const char *str, char c)
+{
+	size_t	i;
+	
+	i = 0;
+	while (str[i] != '\0' && str[i] != c)
+	{
+		i++;
+	}
+	return (i);
+}
 
-char	*world_len(const char *str, char c, int *indice)
+static void	free_s(char **matrix, int end)
 {
 	int	i;
-	int	j;
-	int	len;
-	char	*len_buffer;
 
-	i = *indice;
-	j = 0;
-	len = 0;
-	while (str[i + len] != '\0' && str[i + len] != c)
-		len++;
-	len_buffer = (char *)malloc((len + 1) * sizeof(char *));
-	if (len_buffer == NULL)
+	i = 0;
+	while (i < end)
 	{
-		return (NULL);
+		free(matrix[i]);
+		i++;
 	}
-	while (j < len)
+	free(matrix);
+}
+
+static char	**f_matrix(const char *str, char c, char **matrix, int word)
+{
+	int	i;
+	int	i_mat;
+	int	leng;
+
+	i = 0;
+	i_mat = 0;
+	while (*str && i_mat < word)
 	{
-		len_buffer[j] = str[i + j];
-		j++;
+		while (str[i] == c)
+			i++;
+		if (str[i])
+		{
+			leng = word_len(&str[i], c);
+			matrix[i_mat] = ft_substr(str, i, leng);
+			if (!matrix[i_mat])
+			{
+				free_s(matrix, i_mat);
+				return (NULL);
+			}
+			i += leng;
+			i_mat++; 
+		}
 	}
-	len_buffer[len] = '\0';
-	*indice += len;
-	return (len_buffer);
+	matrix[i_mat] = NULL;
+	return (matrix);
 }
 
 char	**ft_split(const char *s, char c)
 {
-	char	*buffer;
+	char	**matrix;
+	int		count;
+	
+	if(!s)
+		return (NULL);
+	count = word_count(s, c);
+	matrix = (char **)malloc(sizeof(char *) * (count + 1));
+	if (!matrix)
+		return (NULL);
+	matrix = f_matrix(s, c, matrix, count);
+	if (!matrix)
+		return (NULL);
+	return (matrix);
 }

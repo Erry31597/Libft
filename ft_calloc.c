@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:01:31 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/18 10:41:50 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 14:14:42 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,12 @@
 void	*ft_calloc(size_t num, size_t val)
 {
 	void	*buffer;
-	size_t	i;
 	size_t	totleng;
-	unsigned char	*byte;
-	
-	
-	i = 0;
+
 	buffer = malloc(num * val);
 	if (!buffer)
 		return (NULL);
-	byte = buffer;
 	totleng = num * val;
-	while (i < totleng)
-	{
-		byte = 0;
-		i++;
-	}
+	ft_bzero(buffer, totleng);
 	return (buffer);
 }

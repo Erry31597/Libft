@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:24:40 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 15:35:59 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 16:00:32 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_strlen(char const *str)
 {
-	size_t	i;
-
+	int	i;
+	
 	i = 0;
-	while(*str != '\0')
+	while(str[i] != '\0')
 	{
-		*str++;
+		i++;
 	}
-	return(str);
+	return(i);
 }
 
 /*int	main()

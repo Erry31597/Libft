@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 14:18:51 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:03:34 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 14:45:48 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if(n < 0)
 	{
-		ft_putchar_fd(fd, "-", 1),
+		ft_putchar_fd(fd, '-');
 		n = -n;
 	}
 	if (n >= 9)
 	{
 		ft_putnbr_fd(n, fd);
-		n = n % 10;
+		n = n / 10;
+		ft_putchar_fd((n % 10) + '0', fd);
 	}
-	ft_putchar_fd((n % 10) + '0');
 }

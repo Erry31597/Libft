@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 14:44:03 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 15:03:06 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 16:01:08 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const  *s, char (*f)(unsigned int, char))
 	size_t	len;
 	unsigned int	i;
 
+	i = 0;
+	len = 0;
 	if(!s || !f)
 		return (NULL);
 	while (s[len] != '\0')

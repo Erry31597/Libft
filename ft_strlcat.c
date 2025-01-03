@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 13:03:54 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:03:59 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 15:57:06 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		{
 			slung++;
 		}
-		if(size <= dest[dlung])
+		if(size <= dlung)
 		{
 			return(size + slung);
 		}

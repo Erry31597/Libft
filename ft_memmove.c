@@ -6,13 +6,13 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 16:49:56 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/18 12:18:58 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 13:54:50 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, void *src, size_t n)
+void	*ft_memmove(void *dest, void *src, size_t n)
 {
 	size_t	i;
 	unsigned char	*d;

@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:47:50 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/18 11:14:45 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 14:34:42 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	*ft_memchr(const void *str, int val, size_t n)
 {
-	unsigned char	*i;
-	unsigned char	c;
+	unsigned char	*s1;
+	size_t			i;
 	
-	i = (unsigned char *)str;
-	c = (unsigned char) val;
-	if (i == 0)
-	{
+	i = 0;
+	if (!str)
 		return (NULL);
-	}
-	if (i == c)
+	s1 = (unsigned char *)str;
+	while (i < n)
 	{
-		return (void *)i;
+		if (s1[i] == val)
+			return (&s1[i]);
+		i++;
 	}
-	return ft_memchr(i + 1, val, n - 1);
+	return (NULL);
 }

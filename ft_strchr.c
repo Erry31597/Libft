@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:49:04 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/18 10:46:04 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/03 15:54:39 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *str, int c)
 	{
 		if (str[i] == c)
 		{
-			return(char*) str[i];
+			return ((char *)&str[i]);
 		}
 		i++;
 	}
