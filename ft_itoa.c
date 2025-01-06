@@ -6,17 +6,19 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:08:50 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 10:42:47 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 13:44:06 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	lenght(int n)
+static int	lenght(long int n)
 {
 	int	len;
 
 	len = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		n = -n;
@@ -24,7 +26,7 @@ int	lenght(int n)
 	}
 	while (n > 0)
 	{
-		n /= 10;
+		n  = n / 10;
 		len++;
 	}
 	return (len);
@@ -49,8 +51,9 @@ char	*ft_itoa(int n)
 	buffer[len] = '\0';
 	while (n > 0)
 	{
-		buffer[--len] = (n % 10) + '0';
-		n /= 10;
+		buffer[len] = (n % 10) + '0';
+		n = n/ 10;
+		len--;
 	}
 	return (buffer);
 }

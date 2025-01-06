@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 14:44:03 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 10:59:17 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 14:00:26 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*buffer;
-	size_t			len;
+	int			len;
 	unsigned int	i;
 
 	i = 0;
@@ -27,9 +27,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	buffer = (char *)malloc(sizeof(char) * (len + 1));
 	if (!buffer)
 		return (NULL);
-	while (i < len)
+	while (s[i] != '\0')
 	{
-		buffer[i] = f(i, s[i]);
+		buffer[i] = (*f)(i, s[i]);
+		i++;
 	}
 	buffer[len] = '\0';
 	return (buffer);

@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 10:23:59 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 10:51:19 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 13:45:55 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list	*ft_lstnew(void *content)
 	{
 		return (NULL);
 	}
-	new_node -> content = content;
-	new_node -> next = NULL;
+	new_node->content = content;
+	new_node->next = NULL;
 	return (new_node);
 }

@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 14:29:16 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 11:00:27 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 13:27:13 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*strnstr(const char *src, const char *to_find, size_t leng)
 	j = 0;
 	if (to_find[0] == '\0')
 		return ((char *)src);
-	while (src[i] != '\0')
+	while (src[i] != '\0' && i < leng)
 	{
 		if (src[i] == to_find[j])
 		{
-			while (i < leng && src[i + j] == to_find[j] && to_find[j] != '\0')
+			while (src[i + j] < leng && src[i + j] == to_find[j] && to_find[j] != '\0')
 			{
 				j++;
 			}

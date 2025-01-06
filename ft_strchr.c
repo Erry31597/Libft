@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:49:04 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 10:56:28 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 13:21:03 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)&str[i]);
 		}
 		i++;
+	}
+	if (c == '\0')
+	{
+		return ((char *)&str[i]);
 	}
 	return (NULL);
 }

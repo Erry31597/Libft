@@ -6,12 +6,13 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:44:56 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 11:22:12 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 13:09:32 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -65,4 +66,5 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
+
 #endif
