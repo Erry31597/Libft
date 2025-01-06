@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:44:56 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 13:09:32 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 14:49:13 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,11 @@ int					ft_atoi(const char *str);
 unsigned int		ft_strlcat(char *dest, char *src, unsigned int size);
 int					ft_strlen(const char *str);
 char				*ft_strchr(const char *str, int c);
+int					ft_strncmp(const char *str1, const char *str2, size_t n);
 char				*ft_strrchr(const char *str, int c);
 unsigned int		ft_strlcpy(char *dest, char *src, unsigned int size);
 char				*ft_itoa(int n);
-char				*strnstr(const char *src, const char *to_find, size_t leng);
+char				*ft_strnstr(const char *src, const char *to_find, size_t leng);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);

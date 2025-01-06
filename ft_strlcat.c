@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 13:03:54 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 13:17:11 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 14:34:56 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		slung++;
 	if (size <= dlung)
 		return (size + slung);
-	while (src[i] != '\0' (&& dlung + i) < size - 1)
+	while (src[i] != '\0' && (dlung + i) < size - 1)
 	{
 		dest[dlung + i] = src[i];
 		i++;

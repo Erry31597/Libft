@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:23:55 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 14:04:13 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 14:31:39 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_atoi(const char *str)
 	res = 0;
 	if (!str)
 		return (0);
-	if (ft_strncmp(str, "-2147483684", 11) == 0)
-		return (-2147483684);
+	if (ft_strncmp(str, "-2147483648", 11) == 0)
+		return (-2147483648);
 	if (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
