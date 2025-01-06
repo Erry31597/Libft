@@ -6,13 +6,13 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:24:32 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/03 09:48:47 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:33:14 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int	c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{

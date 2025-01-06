@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 11:09:24 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 12:15:56 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:48:54 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	while (*lst)
 	{
-		tmp = (*lst) -> next;
+		tmp = (*lst)-> next;
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}

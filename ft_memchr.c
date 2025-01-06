@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:47:50 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/03 14:34:42 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:51:59 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *str, int val, size_t n)
 {
 	unsigned char	*s1;
 	size_t			i;
-	
+
 	i = 0;
 	if (!str)
 		return (NULL);

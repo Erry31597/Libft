@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 10:58:26 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 11:03:44 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:51:29 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list	*last;
+
 	if (*lst == NULL)
 	{
-		*lst = new;	
+		*lst = new;
 	}
 	else
 	{
-		t_list *last = ft_lstlast(*lst);
+		last = ft_lstlast(*lst);
 		last -> next = new;
 	}
 }

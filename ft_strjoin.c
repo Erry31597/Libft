@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 09:23:11 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/18 10:34:58 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 11:37:55 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	buffer = (char *)malloc(len1 + len2 + 1);
 	if (!buffer)
 		return (NULL);
-	while  (i < len1)
-	{
+	while (i++ < len1)
 		buffer[i] = s1[i];
-		i++;	
-	}
-	while (j < len2)
-	{
+	while (j++ < len2)
 		buffer[i + j] = s2[j];
-		j++;
-	}
 	buffer[i + j] = '\0';
 	return (buffer);
 }
 
-int	main()
+/*int	main()
 {
 	const char	*s1 = "ciao";
 	const char	*s2 = "bello";
 	char	*buffer = ft_strjoin(s1, s2);
 	
 	printf("%s\n", buffer);
-}
-
+}*/

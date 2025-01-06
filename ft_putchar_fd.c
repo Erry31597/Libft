@@ -6,13 +6,13 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 14:08:33 by eenei             #+#    #+#             */
-/*   Updated: 2024/12/17 13:03:31 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:54:15 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c,int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

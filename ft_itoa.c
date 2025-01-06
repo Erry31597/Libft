@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:08:50 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/03 14:17:44 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:42:47 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	lenght(int n)
 		n /= 10;
 		len++;
 	}
-	return len;
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char *buffer;
-	int len;
+	char	*buffer;
+	int		len;
 
 	len = lenght(n);
 	if (n == -2147483648)

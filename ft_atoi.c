@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:23:55 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/03 13:54:11 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:39:09 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 		i++;
 	while (str[i] == '+' || str[i] == '-')
 	{
-		if(str[i] == '-')
+		if (str[i] == '-')
 			sign *= -1;
 		i++;
 	}
@@ -35,5 +35,5 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	res = (res * sign);
-	return(res);
+	return (res);
 }

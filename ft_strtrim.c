@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:46:59 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/03 16:16:09 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 11:01:35 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*end;
-	char	*buffer;
-	int	i;
+	const char	*end;
+	const char	*start;
+	char		*res;
+	size_t		leng;
 
-	i = 0;
-	end = s1;
-	while (s1[i] == ' ' || (s1[i] >= 9 && s1[i] <= 13))
-	{
-		i++;
-	}
-	if (*s1 == '\0')
+	start = s1;
+	end = s1 + ft_strlen (s1) - 1;
+	leng = end - start + 1;
+	if (!s1)
 		return (NULL);
-	while (*end == '\0')
-	{
+	while (*start && ft_strchr(set, *start))
+		start++;
+	while (end >= start && ft_strchr (set, *end))
 		end--;
-	}
-	while ((end < s1 && *end == ' ') || (*end >= 9 && *end <= 13))
-	{
-		end--;
-	}
-	end == '\0';
-	return ((char *)s1);
+	res = malloc (leng + 1);
+	if (!res)
+		return (NULL);
+	ft_strlcpy (res, (char *)start, leng + 1);
+	res[leng] = '\0';
+	return (res);
 }

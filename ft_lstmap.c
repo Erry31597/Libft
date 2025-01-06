@@ -6,13 +6,13 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 11:42:46 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/03 10:33:04 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:34:32 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void (*)(void *), void(*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*nlst;
 	t_list	*nnode;

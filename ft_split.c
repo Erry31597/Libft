@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 14:00:57 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/03 15:51:34 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:56:11 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ static size_t	word_count(const char *str, char c)
 	}
 	return (count);
 }
-	
+
 static int	word_len(const char *str, char c)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (str[i] != '\0' && str[i] != c)
 	{
@@ -82,7 +82,7 @@ static char	**f_matrix(const char *str, char c, char **matrix, int word)
 				return (NULL);
 			}
 			i += leng;
-			i_mat++; 
+			i_mat++;
 		}
 	}
 	matrix[i_mat] = NULL;
@@ -93,8 +93,8 @@ char	**ft_split(const char *s, char c)
 {
 	char	**matrix;
 	int		count;
-	
-	if(!s)
+
+	if (!s)
 		return (NULL);
 	count = word_count(s, c);
 	matrix = (char **)malloc(sizeof(char *) * (count + 1));

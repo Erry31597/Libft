@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:28:45 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/03 15:55:28 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:56:48 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strdup(char *str)
 {
 	char	*buffer;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	j = 0;
 	while (str[j] != '\0')

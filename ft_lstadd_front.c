@@ -6,15 +6,15 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 10:35:19 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/02 10:45:30 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/06 10:49:17 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if(lst && new)
+	if (lst && new)
 	{
 		new -> next = *lst;
 		*lst = new;
