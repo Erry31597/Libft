@@ -28,7 +28,7 @@ $(NAME) : ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
 bonus: ${OBJSBONUS}
-	ar rcs {NAME} ${OBJSBONUS}
+	ar rcs ${NAME} ${OBJSBONUS}
 
 all: ${NAME}
 

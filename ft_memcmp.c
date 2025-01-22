@@ -6,7 +6,7 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 16:27:44 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 13:15:36 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/08 10:04:40 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*s1;
 	unsigned char	*s2;
 

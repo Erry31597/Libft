@@ -6,32 +6,62 @@
 /*   By: eenei <eenei@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:46:59 by eenei             #+#    #+#             */
-/*   Updated: 2025/01/06 11:01:35 by eenei            ###   ########.fr       */
+/*   Updated: 2025/01/08 14:56:42 by eenei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int	is_set(char c, const char *set)
 {
-	const char	*end;
-	const char	*start;
-	char		*res;
-	size_t		leng;
-
-	start = s1;
-	end = s1 + ft_strlen (s1) - 1;
-	leng = end - start + 1;
-	if (!s1)
-		return (NULL);
-	while (*start && ft_strchr(set, *start))
-		start++;
-	while (end >= start && ft_strchr (set, *end))
-		end--;
-	res = malloc (leng + 1);
-	if (!res)
-		return (NULL);
-	ft_strlcpy (res, (char *)start, leng + 1);
-	res[leng] = '\0';
-	return (res);
+	while (*set)
+	{
+		if (c == *set)
+			return (1);
+		set++;
+	}
+	return (0);
 }
+
+static char	*cpy(char *dest, const char *src, int start, int end)
+{
+	int	i;
+
+	i = 0;
+	while (start <= end)
+	{
+		dest[i] = src[start];
+		i++;
+		start++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+char	*ft_strtrim(const char *s1, const char *set)
+{
+	char	*str;
+	int		start;
+	int		end;
+	int		len;
+
+	start = 0;
+	if (!s1 || !set)
+		return (NULL);
+	end = ft_strlen(s1) - 1;
+	while (s1[start] != '\0' && is_set(s1[start], set) == 1)
+		start++;
+	while (end > start && is_set(s1[end], set) == 1)
+		end--;
+	len = end - start;
+	str = (char *) malloc(sizeof(char) * len + 2);
+	if (!str)
+		return (NULL);
+	str = cpy(str, s1, start, end);
+	return (str);
+}
+
+// int	main()
+// {
+// 	printf("%s\n", ft_strtrim("bellaciao", "bella"));
+// }
